@@ -39,7 +39,10 @@ jobs:
         id: push
         uses: docker/build-push-action@v6
         with:
+          platforms: linux/amd64
+          provenance: false
           push: true
+          target: final
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TIMESTAMP_TAG }}

@@ -16,7 +16,7 @@ RUN mkdir -p /opt/microsoft/powershell/7 && \
     tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 -v
 
 # Start final stage
-FROM public.ecr.aws/spacelift/runner-terraform:latest
+FROM public.ecr.aws/spacelift/runner-terraform:latest AS final
 
 # Temporarily elevate permissions
 USER root
