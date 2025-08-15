@@ -41,6 +41,7 @@ RUN apk add --no-cache \
     libintl \
     libssl3 \
     libstdc++ \
+    openssl \
     tzdata \
     userspace-rcu \
     zlib \
